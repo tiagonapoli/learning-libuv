@@ -19,6 +19,12 @@ idle.out: ./src/idle-handler.c
 cat.out: ./src/cat.c libmyutils.a
 	${GENERIC_COMPILE} ./libmyutils.a
 
+tee.out: ./src/tee.c
+	${GENERIC_COMPILE}
+
+file-watcher.out: ./src/file-watcher.c
+	${GENERIC_COMPILE}
+
 libmyutils.a: ./src/utils/utils.c
 	g++ ${COMPILE_FLAGS} -c $< -o utils.o
 	ar rv libmyutils.a ./utils.o

@@ -1,3 +1,4 @@
 *.out
 *.a
+*.tmp
 libuv-1.38.1
